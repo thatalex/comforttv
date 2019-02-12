@@ -132,11 +132,9 @@ class Addon:
 
         arch_epg = self.loader.download_channel_epg(ch_id, datetime.today() - timedelta(days=int(day_ago)))
         for i, item in enumerate(arch_epg):
-            info = ''.join(['[B]', item['name'], '[/B] [LIGHT](', item['t_time'], ' - ',
-                                                        item['t_time_to'], ')[/LIGHT]'])
-            list_item = xbmcgui.ListItem(label=info)
+            list_item = xbmcgui.ListItem(label=item['name'])
             list_item.setProperty('IsPlayable', 'true')
-            list_item.setInfo('video', {'plot': info})
+            list_item.setInfo('video', {'plot': ''.join(['[LIGHT]', item['t_time'], ' - ', item['t_time_to'], ':[/LIGHT]  ', item['name'],'[CR]'])})
             url = '{0}?action=ch_archive_play&id={1}'.format(self.url, item['id'])
             listing.append((url, list_item, False))
 
