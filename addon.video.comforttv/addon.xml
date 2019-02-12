@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.comforttv"
+       version="1.1"
+       name="Comfort TV"
+       provider-name="That Alex">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0"/>
+    </requires>
+    <extension point="xbmc.python.pluginsource" library="main.py">
+        <provides>video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Add-on for viewing video from Comfort TV</summary>
+        <summary lang="be">Дадатак для прагляду Камфорт ТБ</summary>
+        <summary lang="ru">Дополнение для просмотра Комфорт ТВ</summary>
+        <description lang="en">Add-on for viewing IPTV provided by Garant TV.</description>
+        <description lang="be">Дадатак для прагляду IPTV якое прадастаўляецца правайдарам Гарант ТБ.</description>
+        <description lang="ru">Дополнение для просмотра IPTV предоставляемого провайдером Гарант ТВ.</description>
+        <disclaimer lang="en">For access to video sources register your MAC address in Mobile TV Gomel in your profile.</disclaimer>
+        <disclaimer lang="be">Для доступу да крыніц відэа зарэгіструйце свой MAC адрас ў Mobile TV Gomel у асабістым кабінеце.</disclaimer>
+        <disclaimer lang="ru">Для доступа к источникам видео зарегистируйте свой MAC адрес в Mobile TV Gomel в личном кабинете.</disclaimer>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+        <news lang="en">Fix issues with authorization</news>
+        <language>en be ru</language>
+    </extension>
+
+
+</addon>
